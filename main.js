@@ -1,5 +1,6 @@
 import { getLocation } from "./asset";
 
+try{
 const rootEle = document.getElementById("root");
 
 function rendering() {
@@ -21,3 +22,5 @@ const {default: obj} = await import(rendering());
 const {default: layout} = await import("layout.js");
 
 rootEle.innerHTML = layout(obj());
+
+}catch(e){alert(e)}
